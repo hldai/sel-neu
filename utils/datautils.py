@@ -1,4 +1,7 @@
 import json
+import pandas as pd
+
+CATEGORY_OTHER = 'Other'
 
 
 def read_json_objs(filename):
@@ -15,5 +18,5 @@ def load_category_mapping(category_map_file):
         category_map_dict = {cat_from: cat_to for cat_from, cat_to in df.itertuples(index=False)}
         categories = list(df[1].drop_duplicates())
         categories.append(CATEGORY_OTHER)
-        categories = {cat: i for i, cat in enumerate(categories)}
-    return category_map_dict, categories
+        category_id_dict = {cat: i for i, cat in enumerate(categories)}
+    return category_map_dict, category_id_dict

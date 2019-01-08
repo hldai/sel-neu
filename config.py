@@ -14,8 +14,10 @@ BERT_SEQ_LEN = 128
 BERT_CONFIG_FILE = join(BERT_BASE_DIR, 'uncased_L-12_H-768_A-12/bert_config.json')
 BERT_VOCAB_FILE = join(BERT_BASE_DIR, 'uncased_L-12_H-768_A-12/vocab.txt')
 
+YELP_BERT_INIT_CHECKPOINT = join(BERT_BASE_DIR, 'yelp/model.ckpt-10000')
+
 YELP_CATEGORY_MAP_FILE = join(YELP_DIR, 'misc/category-map.txt')
-YELP_MENTIONS_FILE = join(YELP_DIR, 'fneudata/ua-mentions.txt')
+YELP_MENTIONS_FILE = join(YELP_DIR, 'fneudata/ua-fullinfo-mentions.txt')
 YELP_MENTION_TOKEN_SPAN_FILE = join(YELP_DIR, 'fneudata/ua-mentions-word-idxs.txt')
 YELP_VALID_IDXS_FILE = join(YELP_DIR, 'fneudata/ua-mentions-valid-idxs.txt')
 YELP_TOK_SENTS_FILE = join(YELP_DIR, 'fneudata/ua-mention-tok-sents.txt')
